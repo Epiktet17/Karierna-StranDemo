@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <title>Portfolio</title>
+    <style>
+      h1{
+        font-size: 39px;
+        font-family: Roboto;
+        font-weight: normal;
+        color: rgb(80,80,80);
+        text-align: center;
+      }
+      #banner {
+        width: 100%;
+        height: 360px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class = "container">
+    <h1 class = "text-center mt-2 mb-3">Kun Kariere</h1>
+    <img class = "img-fluid"id = "banner" src ="http://www.picserver.org/images/highway/phrases/career.jpg" height = '320' >
+    <h2 class = "text-center mt-2 mb-2">About Kun</h2>
+    <p class = "lead">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet tellus cras adipiscing enim eu turpis egestas. Gravida quis blandit turpis cursus in hac habitasse. A arcu cursus vitae congue. Est ullamcorper eget nulla facilisi etiam dignissim diam quis. Libero justo laoreet sit amet cursus sit amet. Augue mauris augue neque gravida in. At in tellus integer feugiat. Nibh tellus molestie nunc non blandit. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Lacus luctus accumsan tortor posuere ac ut consequat semper. Tempor orci eu lobortis elementum nibh tellus molestie nunc. Mauris pellentesque pulvinar pellentesque habitant morbi. Pharetra vel turpis nunc eget lorem dolor sed. Auctor elit sed vulputate mi.
+    </p>
+    
+    <h2 class = "text-center mt-2 mb-4">Open Positions</h2>
+    <div>
+        {% for job in jobs %}
+          {% include 'jobitem.html' %}
+        {% endfor %}
+    </div>
+    
+    <div class = "text-center">
+    <button class="btn btn-primary btn-lg">Contact Us</button>
+    <p class="mt-4">Copyright 2023 Kun</p>
+    </div>
+    </div>
+  </body>
+</html>
